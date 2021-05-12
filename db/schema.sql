@@ -1,13 +1,26 @@
--- Drops the animals_db if it exists currently --
-DROP DATABASE IF EXISTS animals_db;
--- Creates the "animals_db" database --
-CREATE DATABASE animals_db;
+-- Drops the employeetracker_db if it exists currently --
+DROP DATABASE IF EXISTS employeetracker_db;
+-- Creates the "employeetracker_db" database --
+CREATE DATABASE employeetracker_db;
 
--- Makes it so all of the following code will affect animals_db --
-USE animals_db;
+-- Makes it so all of the following code will affect employeetracker_db --
+USE employeetracker_d;
 
--- Creates the table "people" within animals_db --
-CREATE TABLE people (
+CREATE TABLE departments (
+  -- Makes a int column called "id" which cannot contain null and auto increments--
+  id INTEGER(10) NOT NULL AUTO_INCREMENT,
+  -- Makes a VARCHAR column called "NAME" which cannot contain null --
+  name VARCHAR(30) NOT NULL,
+);
+
+CREATE TABLE employees (
+  -- Makes a int column called "id" which cannot contain null and auto increments--
+  id INTEGER(10) NOT NULL AUTO_INCREMENT,
+  -- Makes a VARCHAR column called "NAME" which cannot contain null --
+  name VARCHAR(30) NOT NULL,
+);
+
+CREATE TABLE roles (
   -- Makes a string column called "name" which cannot contain null --
   name VARCHAR(30) NOT NULL,
   -- Makes a boolean column called "has_pet" which cannot contain null --

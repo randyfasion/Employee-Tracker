@@ -6,7 +6,7 @@ CREATE DATABASE employeetracker_db;
 -- Makes it so all of the following code will affect employeetracker_db --
 USE employeetracker_d;
 
-CREATE TABLE departments (
+CREATE TABLE department (
   -- Makes a int column called "id" which cannot contain null and auto increments--
   id INTEGER(10) NOT NULL AUTO_INCREMENT,
   -- Makes a VARCHAR column called "NAME" which cannot contain null --
@@ -14,7 +14,7 @@ CREATE TABLE departments (
   PRIMARY KEY(id)
 );
 
-CREATE TABLE roles (
+CREATE TABLE role (
   -- Makes a integer column called "id" which cannot contain null and auto increments --
   id INTEGER(10) NOT NULL AUTO_INCREMENT,
   -- Makes a varchar column called "title" which cannot contain null --
@@ -25,7 +25,7 @@ CREATE TABLE roles (
   PRIMARY KEY(id)
 );
 
-CREATE TABLE employees (
+CREATE TABLE employee (
   -- Makes a int column called "id" which cannot contain null and auto increments--
   id INTEGER(10) NOT NULL AUTO_INCREMENT,
   -- Makes a VARCHAR column called "NAME" which cannot contain null --

@@ -4,7 +4,7 @@ DROP DATABASE IF EXISTS employeetracker_db;
 CREATE DATABASE employeetracker_db;
 
 -- Makes it so all of the following code will affect employeetracker_db --
-USE employeetracker_d;
+USE employeetracker_db;
 
 CREATE TABLE department (
   -- Makes a int column called "id" which cannot contain null and auto increments--

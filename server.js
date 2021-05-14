@@ -99,7 +99,7 @@ connection.connect((err) => {
                             .then((response) => {
     
                                 //database connection to add the new department 
-                                connection.query(`INSERT INTO departments (name) VALUES ('${response.newDept}')`);
+                                connection.query(`INSERT INTO department (name) VALUES ('${response.newDept}')`);
                                 console.log(`new department: ${response.newDept}`);
     
                                 start();
@@ -162,7 +162,7 @@ connection.connect((err) => {
                                 const dept_id = Math.floor(Math.random() * 4) + 1    
     
                                 //database connection to add new role 
-                                connection.query(`INSERT INTO roles (title, salary, department_id) VALUES ('${response.newRoleName}', ${response.newRoleSalary}, ${dept_id})`);
+                                connection.query(`INSERT INTO role (title, salary, department_id) VALUES ('${response.newRoleName}', ${response.newRoleSalary}, ${dept_id})`);
                             
                                 console.log(`\n Inserting new role of: ${response.newRoleName} \n`);
     

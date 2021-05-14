@@ -162,9 +162,9 @@ connection.connect((err) => {
                                 const dept_id = Math.floor(Math.random() * 4) + 1    
     
                                 //database connection to add new role 
-                                connection.query(`INSERT INTO role (title, salary, department_id) VALUES ('${response.newRoleName}', ${response.newRoleSalary}, ${dept_id})`);
+                                connection.query(`INSERT INTO role (title, salary, department_id) VALUES ('${response.newRole}', ${response.newRoleSalary}, ${dept_id})`);
                             
-                                console.log(`\n Inserting new role of: ${response.newRoleName} \n`);
+                                console.log(`\n Inserting new role of: ${response.newRole} \n`);
     
                                 start();
                             })

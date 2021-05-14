@@ -131,8 +131,10 @@ connection.connect((err) => {
                             (err, res) => {
                                 if (res) {
                                     console.log('\n List of Roles: \n');
-                                    res.forEach((response) => {console.log(response.title)});
-                                    console.log('')
+                                    res.forEach(({title, salary, department_id }) => {
+                                        console.log(`| ${title} | ${salary} | ${department_id}`);
+                                    });
+                                    
                                     start();
                                 } else {
                                     console.log(`Error ${err}`);

@@ -12,7 +12,7 @@ So that I can organize and plan my business
 
 Link to Demo:
 
-<a href="https://randynotetaker.herokuapp.com" >Employee-Tracker<a>
+<a href="https://youtu.be/P5-nPknSGGw" >Employee-Tracker<a>
 
 
 
@@ -24,5 +24,5 @@ The following image shows the appearance of the application:
 
 Link to GitHub Repository:
 
-<a href="https://randynotetaker.herokuapp.com" >GitHub<a>
+<a href="https://github.com/randyfasion/Employee-Tracker" >GitHub<a>
 

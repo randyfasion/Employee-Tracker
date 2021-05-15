@@ -172,5 +172,84 @@ connection.connect((err) => {
                 }
             })
     }
+
+    const employees = () => {
+        //questions regarding departments
+            inquirer
+                .prompt({
+                    name: 'employee',
+                    type: 'list',
+                    message: 'employees?',
+                    choices: [
+                        'View all',
+                        'Add',
+                        'update employee role'
+                    ]
+                })
+                .then((answer) => {
+                    switch(answer.roles) {
+                        case 'View all':
+                            connection.query(
+                                'SELECT *FROM employee',
+                                (err, res) => {
+                                    if (res) {
+                                        console.log('\n List of employees: \n');
+
+                                        res.forEach((response) => {console.log(`${response.first_name} ${response.last_name}`)});
+                                        console.log('');
+                                    
+                                        
+                                        start();
+                                    } else {
+                                        console.log(`Error ${err}`);
+                                    }
+                                })
+                            break;
+        
+                        case 'Add': 
+
+                        connect.query(
+                            'SELECT * FROM role',
+                            (err, res) => {
+                                let roles = [];
+                                res.forEach((role) => {role.push(role.title)});
+                            
+                            //prompt for new role name 
+                            inquirer
+                                .prompt([
+                                    {
+                                        name: 'newname',
+                                        type: 'input',
+                                        message: 'new emplyee name: first and last ',
+                                    },
+                                    {
+                                        name: 'newrole',
+                                        type: 'list',
+                                        message: 'chose employee role: ',
+                                        choices: ['IT Specialist', 'engineer', 'manager']
+                                    },
+                                    ])
+                                .then((response) => {
+                                   let newname = response.newname.split(" ");
+                                   const firstname = newname[0];
+                                   const lastname = newname[1]; 
+
+                                   let role_id;
+                                   switch (response.role) {
+                                       
+                                   }
+
+        
+                                    //database connection to add new role 
+                                    connection.query(`INSERT INTO role (title, salary, department_id) VALUES ('${response.newRole}', ${response.newRoleSalary}, ${dept_id})`);
+                                
+                                    console.log(`\n Inserting new role of: ${response.newRole} \n`);
+        
+                                    start();
+                            })});
+                            break;
+                    }
+                })
+        }
     
     

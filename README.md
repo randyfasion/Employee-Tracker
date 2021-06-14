@@ -15,6 +15,14 @@ Link to Demo:
 <a href="https://youtu.be/P5-nPknSGGw" >Employee-Tracker<a>
 
 
+Technologies:
+
+- MySQL
+
+- InquirerJs
+
+- Express 
+
 
 
 The following image shows the appearance of the application: 

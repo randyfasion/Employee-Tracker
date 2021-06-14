@@ -26,3 +26,12 @@ Link to GitHub Repository:
 
 <a href="https://github.com/randyfasion/Employee-Tracker" >GitHub<a>
 
+
+## Contact Information
+Email: RandyFaison@gmail.com
+
+
+- - -
+## License
+ [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
